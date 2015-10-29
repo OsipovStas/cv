@@ -12,26 +12,50 @@
 \usepackage[scale=0.75]{geometry} % Reduce document margins
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+\usepackage{stackengine}
+\def\Ruble{\stackengine{.64ex}{%
+  \stackengine{.4ex}{\textbf{\textsf{P}}}{\rule{1ex}{.16ex}\kern.55ex}{O}{r}{F}{F}{L}%
+  }{\rule{1ex}{.16ex}\kern.55ex}{O}{r}{F}{F}{L}\kern-.1ex}
+
+
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
-\firstname{John} % Your first name
-\familyname{Smith} % Your last name
+\firstname{Stanislav} % Your first name
+\familyname{Osipov} % Your last name
 
 % All information in this block is optional, comment out any lines you don't need
-\address{123 Broadway}{City, State 12345}
-\mobile{(000) 111 1111}
-\email{john@smith.com}
-\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
-\extrainfo{additional information}
+\address{21/2 Komendantsky av.}{St.-Petersburg, Russian Federation}
+\mobile{(911) 284 4911}
+\email{stasstels@gmail.com}
+\homepage{https://github.com/OsipovStas}{OsipovStas} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
 \makecvtitle % Print the CV title
+%----------------------------------------------------------------------------------------
+%	GOAL SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Goal}
+\cvitem{Position}{Java\textbackslash Scala Developer}{}{}{}{}  % Arguments not required can be left empty
+\cvitem{Salary}{100.000 \Ruble}{}{}{}{}
+
+%----------------------------------------------------------------------------------------
+%	ABOUT SECTION
+%----------------------------------------------------------------------------------------
+
+\section{About}
+\cvitem{Position}{Java\textbackslash Scala Developer}{}{}{}{}  % Arguments not required can be left empty
+\cvitem{Salary}{100.000 \Ruble}{}{}{}{}
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
