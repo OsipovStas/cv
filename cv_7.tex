@@ -4,10 +4,10 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[12pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
 \moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{grey} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \usepackage[scale=0.75]{geometry} % Reduce document margins
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
@@ -17,7 +17,7 @@
   \stackengine{.4ex}{\textbf{\textsf{P}}}{\rule{1ex}{.16ex}\kern.55ex}{O}{r}{F}{F}{L}%
   }{\rule{1ex}{.16ex}\kern.55ex}{O}{r}{F}{F}{L}\kern-.1ex}
 
-
+\newcommand\Chref[3][cyan]{\href{#2}{\small\color{#1}#3}}
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
@@ -51,7 +51,7 @@
 %----------------------------------------------------------------------------------------
 
 \section{About}
-Passionate developer with solid background in math and good knowledge of algorithms and data structures. Willing to deliver clean and testable code. Strong problem solving skills. Enjoy to found smart solutions of complex tasks. Eager to progress, self-motivated and communicable. Interested in various areas of computer science. Particularly in Java-ecosystem, functional programming and software engineering.
+Passionate developer with solid background in math and good knowledge of algorithms and data structures. Willing to deliver clean and testable code. Enjoy to found smart solutions of complex tasks. Eager to progress, self-motivated and communicable. Interested in various areas of computer science. Particularly in Java-ecosystem, functional programming and software engineering.
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -59,8 +59,8 @@ Passionate developer with solid background in math and good knowledge of algorit
 
 \section{Experience}
 
-\cventry{August 2014 -- Present}{Java Developer}{\textsc{Sidenis}}{Saint-Petersburg}{}{
-Participating in development of various projects for Swiss Reinsurance company.
+\cventry{August 2014 -- Present}{Java Developer}{\textsc{\Chref{http://sidenis.ru/}{Sidenis}}}{Saint-Petersburg}{}{
+Participating in development of various projects for \Chref{http://www.swissre.com/}{Swiss Reinsurance company}.
 \newline{}
 Projects:
 \begin{itemize}
@@ -71,12 +71,12 @@ Technologies:
 \begin{itemize}
 \item{J2EE(EJB, JAX-WS), Hibernate, Spring IoC, Oracle, Maven, git}
 \end{itemize}
-\item{\textit{Project Underwriting Management Application}}\newline{}
+\item{\textit{\Chref{http://www.swissre.com/clients/client_tools/about_puma.html}{Project Underwriting Management Application}}}\newline{}
 It is a tool supporting Swiss Re's Engineering Underwriters in their underwriting process for construction and erection risks
 \newline{}
 Technologies:
 \begin{itemize}
-\item{J2SE, Swing, Guice, Guava}
+\item{J2SE, Swing, Firebird, Guice, Guava}
 \end{itemize}
 \end{itemize}
 %Detailed achievements:
@@ -98,9 +98,9 @@ Technologies:
 
 %------------------------------------------------
 
-\cventry{Summer 2013}{Intern developer}{\textsc{Jet Brains}}{Saint-Petersburg}{}{\textit{Responsibilities:} 
+\cventry{Summer 2013}{Intern developer}{\textsc{\Chref{https://www.jetbrains.com/}{Jet Brains}}}{Saint-Petersburg}{}{\textit{Responsibilities:} 
 \newline{}
-Developing refactoring tools for IntelliJ IDEA La Clojure plugin
+Developing refactoring tools for IntelliJ IDEA \Chref{https://plugins.jetbrains.com/plugin/?id=4050}{La Clojure plugin}
 \newline{}
 \newline{}
 \textit{Results:}
@@ -128,15 +128,14 @@ Developing refactoring tools for IntelliJ IDEA La Clojure plugin
 \item {C\textbackslash C++, Python, Clojure, Haskell}
 \end{itemize}
 \end{itemize}}
-\cvitem{OS}{Unix-like, Windows}
 \cvitem{IDE}{IntelliJ IDEA, PyCharm, Vim}
+\cvitem{CI}{Atlassian JIRA, Bamboo}
+\cvitem{Build Tools}{Maven, Ant}
+\cvitem{DBMS}{Oracle, MySQL, Firebird, H2SQL}
+\cvitem{Servers}{IBM WebSphere, Tomcat}
+\cvitem{OS}{Unix-like, Windows}
 \cvitem{VCS}{Git, SVN, CVS}
-\cvitem{Technologies}{Java Concurrency, JVM internals basic,
-IntelliJ Platform internals,
-OpenCV, Weka, Intel TBB,
-Sbt, Maven, make,
-JUnit, ScalaTest,
-SQL, JDBC, XML, Regex}
+\cvitem{Others}{Guava, JUnit, Mockito, Java Concurrency, Hibernate, \newline{}Spring IoC, Guice, IntelliJ Platform Experience,\newline{} OpenCV, Intel TBB}
 
 
 %----------------------------------------------------------------------------------------
@@ -145,8 +144,8 @@ SQL, JDBC, XML, Regex}
 
 \section{Education}
 
-\cventry{2014}{M.Sc. in Computer Science}{St.-Petersburg Academic University of the Russian
-Academy of Science}{}{}{Thesis:\newline{}
+\cventry{2014}{M.Sc. in Computer Science}{\Chref{http://mit.spbau.ru/}{St.-Petersburg Academic University of the Russian
+Academy of Science}}{}{}{Thesis:\newline{}
 "Macroextensions for IntelliJ Scala Plugin"\newline{}
 Advisor:\newline{}
 Alexander Podkhalyuzin, Scala Plugin Team Lead\newline{}
@@ -157,20 +156,20 @@ complicated. A solution to this problem is suggested in my diploma. A system
 of lightweight IDE macroextensions is presented, which can dynamically upload
 information about compiler generated methods into IDE.}  % Arguments not required can be left empty
 \cventry{2011}{B.Sc. in Computer Science}{St.-Petersburg NRU of Information Technologies,
-Mechanics and Optics(ITMO)}{}{}{Thesis:\newline{}
+Mechanics and Optics(\Chref{http://www.ifmo.ru/}{ITMO})}{}{}{Thesis:\newline{}
 "Model of tunnelling through periodic array of quantum dots in a magnetic field"\newline{}
 Advisor:\newline{}
 Prof. I. Yu. Popov\newline{}
 Publication:\newline{}
 Model of tunnelling through periodic array of quantum dots in a magnetic field\newline{}
-I. Yu. Popov and S. A. Osipov, 2012 Chinese Phys. B 21.}
+I. Yu. Popov and S. A. Osipov, 2012 \Chref{http://iopscience.iop.org/article/10.1088/1674-1056/21/11/117306/meta;jsessionid=235552A24DC31E42C8C2DF02777357BF.ip-10-40-2-121}{Chinese Phys. B 21.}}
 
 \subsection{Additional}
-\cvitem{2012-2014}{Computer Science Center student}
+\cvitem{2012-2014}{\Chref{https://compscicenter.ru/}{Computer Science Center} student}
 \cvitem{Courses and conferences}{\begin{itemize}
-\item {FP principles in Scala}
+\item {\Chref{https://www.coursera.org/maestro/api/certificate/get_certificate?course_id=972351}{FP principles in Scala}}
 \item {Joker 2014 and 2015 participant}
-\item {Refactoring 2.0 training}
+\item {\Chref{http://jokerconf.com/trainings/krivosheev/}{Refactoring 2.0 training}}
 \end{itemize}}
 
 
